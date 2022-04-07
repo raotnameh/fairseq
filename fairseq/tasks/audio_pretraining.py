@@ -104,6 +104,9 @@ class AudioPretrainingConfig(FairseqDataclass):
             "target texts): none/low/high (default: none). "
         },
     )
+    sampling_alpha: float = field(
+        default=1.0,
+        )
 
 
 @register_task("audio_pretraining", dataclass=AudioPretrainingConfig)
